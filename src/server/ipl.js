@@ -1,4 +1,5 @@
-function numberofmatchesPlayed(matches) {
+function numberofmatchesPlayed(matches) //problem1
+{    
 
     const result = {};
   
@@ -20,7 +21,7 @@ function numberofmatchesPlayed(matches) {
 
 
 
-function numberofmatchesWon(matches) 
+function numberofmatchesWon(matches)    //problem2
 {
     let result = {};
     
@@ -57,7 +58,8 @@ function numberofmatchesWon(matches)
 
 
 
-function extraRuns2016(matches, deliveries) {
+function extraRuns2016(matches, deliveries) //problem3 
+{
 
     let result = {};
 
@@ -89,7 +91,8 @@ function extraRuns2016(matches, deliveries) {
 
 
 
-function economicalBowlers2015(matches, deliveries){
+function economicalBowlers2015(matches, deliveries) //problem4
+{
 
     let matchId = [];
 
@@ -127,10 +130,10 @@ function economicalBowlers2015(matches, deliveries){
                 ballsPerPlayer[i.bowler] += 1;
             }
 
-            // if(Number(i.wide_runs) > 0 || Number(i.noball_runs) > 0){
+            if(Number(i.wide_runs) > 0 || Number(i.noball_runs) > 0){
 
-            //     ballsPerPlayer[i.bowler] -= 1;
-            // }
+                ballsPerPlayer[i.bowler] -= 1;
+            }
         }
     }
 
@@ -154,4 +157,4 @@ function economicalBowlers2015(matches, deliveries){
 }
 
 
-module.exports = {numberofmatchesPlayed,numberofmatchesWon,extraRuns2016,economicalBowlers2015};
+module.exports = {numberofmatchesPlayed, numberofmatchesWon, extraRuns2016, economicalBowlers2015};

@@ -4,7 +4,8 @@ const deliveries = '../data/deliveries.csv'
 
 const csv = require('csvtojson')
 
-const result=require('./ipl'); 
+const result = require('./ipl'); 
+
 csv()
     .fromFile(matches)
     .then((datamatches) => {
@@ -62,6 +63,6 @@ csv()
           
             });
           
-         });
+        });
 
-      });
+    });
