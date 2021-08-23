@@ -64,7 +64,7 @@ Each file will contain separate outputs.
 - **`server`**
     - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Executes all the functions. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from [step 4 of Installation.](#4-install-csvtojson) 
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from [step 4](#4-install-csvtojson) of Installation.
 
 
 csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
