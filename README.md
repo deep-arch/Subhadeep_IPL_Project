@@ -37,13 +37,13 @@ npm run start
 
 #### 6: Check the outputs
 
-go to the output directory using
+Go to the output directory using:
 
 ```sh
 cd src/public/output
 ```
 
-Each file will contain separate outputs.
+Each file will contain separate outputs to the [problems](#problems).
 
 
 ---
@@ -67,7 +67,7 @@ Each file will contain separate outputs.
 **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from [step 4](#4-install-csvtojson) of Installation.
 
 
-csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
+**csvtojson** module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
 It can be used as node.js library / command line tool / or in browser. 
 You can read more about it on [CSVtoJSON](https://www.npmjs.com/package/csvtojson).
 
