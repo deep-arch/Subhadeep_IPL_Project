@@ -4,7 +4,8 @@
   "description": "Data analysis on the IPL datasets in 'src/data'.",
   "main": "src/server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src/server && node index.js"
   },
   "author": "Subhadeep Bandyopadhyay",
   "license": "ISC",
