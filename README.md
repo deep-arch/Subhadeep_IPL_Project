@@ -2,7 +2,7 @@
 
 This project is about getting several insights and information from a large set of data. The Data is of all IPL seasons played from 2008 to 2017. The data is stored in .csv files.
 
-## Install
+## Installation
 
 **[1](#step-1): Clone this repository**
 
@@ -64,7 +64,7 @@ Each file will contain separate outputs.
 - **`server`**
     - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Executes all the functions. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from step 4 of Installation.
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from [step-4](#step-4) of Installation.
 
 csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
 It can be used as node.js library / command line tool / or in browser. 
