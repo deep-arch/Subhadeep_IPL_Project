@@ -55,8 +55,6 @@ Each file will contain separate outputs to the [problems](#problems).
 
 - **`data`**: This directory contains the dataset: `matches.csv` and `deliveries.csv`.
 
-- **`functions`**: This directory contains all functions to the assigned problems.
-
 - **`public`**: This directory contains a directory named `output`.
 
     - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
