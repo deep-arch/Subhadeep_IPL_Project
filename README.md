@@ -41,7 +41,7 @@ go to the output directory using
 cd src/public/output
 ```
 
-Each file will be containing separate outputs
+Each file will contain separate outputs.
 
 
 ---
