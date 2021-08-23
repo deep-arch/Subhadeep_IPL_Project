@@ -34,9 +34,3 @@ function numberofmatchesWon(matches)
 }
 
 module.exports = {numberofmatchesWon};
-
-
-
-
-
-
