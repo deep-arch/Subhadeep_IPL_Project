@@ -22,20 +22,20 @@ cd Subhadeep_IPL_Project
 npm install
 ```
 
-### 4. Install csvtojson 
+**4: Install csvtojson**
 
 ```sh
 npm i --save csvtojson
 ```
 
-### 5. Run the functions
+**5: Run the functions**
 
 ```sh
 npm run start
 ```
 
 
-### 6. Check the outputs
+**6: Check the outputs**
 
 go to the output directory using
 
