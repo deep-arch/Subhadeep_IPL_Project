@@ -4,14 +4,14 @@ const deliveries = '../data/deliveries.csv'
 
 const csv = require('csvtojson')
 
-
+const result=require('./ipl'); 
 csv()
     .fromFile(matches)
     .then((datamatches) => {
         //console.log(datamatches);
 
 
-        const result=require('./../functions/numberofmatchesPlayed'); //problem1
+        //problem1
         fs.writeFile('../public/output/numberofmatchesPlayed.json', JSON.stringify(result.numberofmatchesPlayed(datamatches)), 'utf8', function (err) {
           if (err) {
               console.log("An error occured while writing JSON Object to File.");
@@ -21,8 +21,8 @@ csv()
         });
 
 
-        const result1=require('./../functions/numberofmatchesWon');  //problem2
-        fs.writeFile('../public/output/numberofmatchesWon.json', JSON.stringify(result1.numberofmatchesWon(datamatches)), 'utf8', function (err) {
+        //problem2
+        fs.writeFile('../public/output/numberofmatchesWon.json', JSON.stringify(result.numberofmatchesWon(datamatches)), 'utf8', function (err) {
               if (err) {
                   console.log("An error occured while writing JSON Object to File.");
                   return console.log(err);
@@ -39,8 +39,8 @@ csv()
             //  console.log(datamatches);
             
 
-            const result3 = require('./../functions/extraRuns2016');  //problem3
-            fs.writeFile('../public/output/extraRuns2016.json', JSON.stringify(result3.extraRuns2016(datamatches,datadeliveries)), 'utf8', function (err) {
+            //problem3
+            fs.writeFile('../public/output/extraRuns2016.json', JSON.stringify(result.extraRuns2016(datamatches,datadeliveries)), 'utf8', function (err) {
                 if (err) {
                     console.log("An error occured while writing JSON Object to File.");
                     return console.log(err);
@@ -51,8 +51,8 @@ csv()
             });  
 
             
-            const result4 = require('./../functions/economicalBowlers2015');  //problem4
-            fs.writeFile('../public/output/economicalBowlers2015.json', JSON.stringify(result4.economicalBowlers2015(datamatches,datadeliveries)), 'utf8', function (err) {
+            //problem4
+            fs.writeFile('../public/output/economicalBowlers2015.json', JSON.stringify(result.economicalBowlers2015(datamatches,datadeliveries)), 'utf8', function (err) {
                 if (err) {
                     console.log("An error occured while writing JSON Object to File.");
                     return console.log(err);
