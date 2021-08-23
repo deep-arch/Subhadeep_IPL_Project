@@ -55,10 +55,10 @@ Each file will contain separate outputs to the [problems](#problems).
 
 **`src`**: This directory contains four directories:
 
-- **`data`**: This directory contains the dataset: `matches.csv` and `deliveries.csv`.
+- **`data`**: This directory contains the datasets: `matches.csv` and `deliveries.csv`.
 
 - **`server`**
-    - **`ipl.js`**: This file contains the code (functions) which calulate the results to the [problems](#problems).
+    - **`ipl.js`**: This file contains the code (functions) which calulates the results to the [problems](#problems).
 
     - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Imports and executes all the functions from **`ipl.js`**. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
