@@ -1,4 +1,4 @@
-# IPL dataset project
+# IPL Dataset Project
 
 This project is about getting several insights and information from a large set of data. The Data is of all IPL seasons played from 2008 to 2017. The data is stored in .csv files.
 
@@ -63,7 +63,7 @@ Each file will contain separate outputs to the [problems](#problems).
 
 - **`server`**
     - **`ipl.js`**: This file contains the code (functions) which calulate the results to the [problems](#problems).
-    
+
     - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Imports and executes all the functions from **ipl.js**. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
 **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install **csvtojson** package from [step 4](#4-install-csvtojson) of Installation.
