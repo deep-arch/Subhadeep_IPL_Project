@@ -118,7 +118,6 @@ function economicalBowlers2015(matches, deliveries) //problem4
                 runsByPlayer[i.bowler] = Number(i.total_runs);
             }else{
 
-                //runsByPlayer[i.bowler] += Number(i.wide_runs) + Number(i.noball_runs) + Number(i.batsman_runs);
                 runsByPlayer[i.bowler] += Number(i.total_runs);
             }
 
