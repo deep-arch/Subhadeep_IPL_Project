@@ -65,7 +65,7 @@ Each file will contain separate outputs.
 
 csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
 It can be used as node.js library / command line tool / or in browser. 
-You can read more on [CSVtoJSON](https://www.npmjs.com/package/csvtojson).
+You can read more about it on [CSVtoJSON](https://www.npmjs.com/package/csvtojson).
 
 
 - **`server`**
