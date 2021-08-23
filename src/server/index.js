@@ -65,17 +65,3 @@ csv()
          });
 
       });
-
-
-
- 
-
- 
-
-// fs.writeFile('../public/output/ExtraRunConcededePerTeamIn2016.json', JSON.stringify(result.Top10EconomicalBowlersInTheYear2015(datamatch, datadeliver)), 'utf8', function (err) {
-//     if (err) {
-//         console.log("An error occured while writing JSON Object to File.");
-//         return console.log(err);
-//     }
- 
-//     console.log("JSON file has been saved.");
