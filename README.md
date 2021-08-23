@@ -33,7 +33,8 @@ npm init
 **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. 
 
 ```
-csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. It can be used as node.js library / command line tool / or in browser.
+csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
+It can be used as node.js library / command line tool / or in browser.
 ```
 
 **`index.js`**: This file contains the code which: 1. Reads the csv data 2. Calls the JavaScript functions. 3. Saves the results in `src/public/***.json` files
