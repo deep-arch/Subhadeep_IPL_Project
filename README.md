@@ -4,38 +4,38 @@ This project is about getting several insights and information from a large set 
 
 ## Install
 
-**1: Clone this repository**
+**[1](#step-1): Clone this repository**
 
 ```sh
 git clone https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
-**2: Go to the working directory**
+**[2](#step-2): Go to the working directory**
 
 ```sh
 cd Subhadeep_IPL_Project
 ```
 
-**3: Install npm packages**
+**[3](#step-3): Install npm packages**
 
 ```sh
 npm install
 ```
 
-**4: Install csvtojson**
+**[4](#step-4): Install csvtojson**
 
 ```sh
 npm i --save csvtojson
 ```
 
-**5: Run the functions**
+**[5](#step-5): Run the functions**
 
 ```sh
 npm run start
 ```
 
 
-**6: Check the outputs**
+**[6](#step-6): Check the outputs**
 
 go to the output directory using
 
@@ -61,15 +61,14 @@ Each file will contain separate outputs.
 
     - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
 
-- **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. 
+- **`server`**
+    - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Executes all the functions. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
+
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from <#step-4> of Installation.
 
 csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
 It can be used as node.js library / command line tool / or in browser. 
 You can read more about it on [CSVtoJSON](https://www.npmjs.com/package/csvtojson).
-
-
-- **`server`**
-    - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Imports all function from `src/functions` directory and executes them. 3. Stores the solution of each problem in separate output files in `src/public/output` directory.
 
 
 ---
