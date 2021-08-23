@@ -16,26 +16,26 @@ git clone https://github.com/deep-arch/Subhadeep_IPL_Project.git
 cd Subhadeep_IPL_Project
 ```
 
-**[3](#step-3): Install npm packages**
+**###3: Install npm packages**
 
 ```sh
 npm install
 ```
 
-**[4](#step-4): Install csvtojson**
+**###4: Install csvtojson**
 
 ```sh
 npm i --save csvtojson
 ```
 
-**[5](#step-5): Run the functions**
+**###5: Run the functions**
 
 ```sh
 npm run start
 ```
 
 
-**[6](#step-6): Check the outputs**
+**###6: Check the outputs**
 
 go to the output directory using
 
@@ -64,8 +64,8 @@ Each file will contain separate outputs.
 - **`server`**
     - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Executes all the functions. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from #step-4 of Installation.
-# step 4
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from step [4](#4) of Installation.
+
 
 csvtojson module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
 It can be used as node.js library / command line tool / or in browser. 
