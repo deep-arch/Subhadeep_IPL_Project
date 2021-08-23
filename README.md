@@ -1,6 +1,6 @@
 # IPL dataset project
 
-This project is about getting several insights and information from a large set of data. The Data is of all IPL seasons played from 2008 to 2017. The data is stored in CSV files.
+This project is about getting several insights and information from a large set of data. The Data is of all IPL seasons played from 2008 to 2017. The data is stored in .csv files.
 
 ## Install
 
