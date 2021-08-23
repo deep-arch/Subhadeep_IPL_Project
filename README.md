@@ -22,7 +22,7 @@ cd Subhadeep_IPL_Project
 npm install
 ```
 
-**###4: Install csvtojson**
+### 4: Install csvtojson
 
 ```sh
 npm i --save csvtojson
