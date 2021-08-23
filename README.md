@@ -4,25 +4,25 @@ This project is about getting several insights and information from a large set 
 
 ## Installation
 
-##### 1: Clone this repository
+#### 1: Clone this repository
 
 ```sh
 git clone https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
-##### 2: Go to the working directory
+#### 2: Go to the working directory
 
 ```sh
 cd Subhadeep_IPL_Project
 ```
 
-##### 3: Install npm packages
+#### 3: Install npm packages
 
 ```sh
 npm install
 ```
 
-##### 4: Install csvtojson
+#### 4: Install csvtojson
 
 ```sh
 npm i --save csvtojson
@@ -35,7 +35,7 @@ npm run start
 ```
 
 
-##### 6: Check the outputs
+#### 6: Check the outputs
 
 go to the output directory using
 
