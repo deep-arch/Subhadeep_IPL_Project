@@ -53,18 +53,20 @@ Each file will contain separate outputs to the [problems](#problems).
 
 **`src`**: This directory contains four directories:
 
-- **`data`**: This directory contains the dataset: `matches.csv` and `deliveries.csv`
+- **`data`**: This directory contains the dataset: `matches.csv` and `deliveries.csv`.
 
-- **`functions`**: This directory contains all functions to the assigned problems
+- **`functions`**: This directory contains all functions to the assigned problems.
 
-- **`public`**: This directory contains a directory named `output`
+- **`public`**: This directory contains a directory named `output`.
 
     - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
 
 - **`server`**
-    - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Executes all the functions. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
+    - **`ipl.js`**: This file contains the code (functions) which calulate the results to the [problems](#problems).
+    
+    - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Imports and executes all the functions from **ipl.js**. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install the npm package from [step 4](#4-install-csvtojson) of Installation.
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install **csvtojson** package from [step 4](#4-install-csvtojson) of Installation.
 
 
 **csvtojson** module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
