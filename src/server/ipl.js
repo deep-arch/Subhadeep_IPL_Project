@@ -1,4 +1,6 @@
-function numberofmatchesPlayed(matches) //problem1
+//Problem 1:   Number of matches played per year for all the years in IPL.
+
+function numberofmatchesPlayed(matches) 
 {    
 
     const result = {};
@@ -21,7 +23,9 @@ function numberofmatchesPlayed(matches) //problem1
 
 
 
-function numberofmatchesWon(matches)    //problem2
+//Problem 2:   Number of matches won per team per year in IPL.
+
+function numberofmatchesWon(matches)    
 {
     let result = {};
     
@@ -58,7 +62,9 @@ function numberofmatchesWon(matches)    //problem2
 
 
 
-function extraRuns2016(matches, deliveries) //problem3 
+//Problem 3:   Extra runs conceded per team in the year 2016.
+
+function extraRuns2016(matches, deliveries) 
 {
 
     let result = {};
@@ -92,7 +98,9 @@ function extraRuns2016(matches, deliveries) //problem3
 
 
 
-function economicalBowlers2015(matches, deliveries) //problem4
+//Problem 4:   Top 10 economical bowlers in the year 2015.
+
+function economicalBowlers2015(matches, deliveries) 
 {
 
     let matchId = [];
