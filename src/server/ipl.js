@@ -3,18 +3,18 @@ function numberofmatchesPlayed(matches) //problem1
 
     const result = {};
   
-          for (let match of matches) {
+    for (let match of matches) {
 
-            const season = match.season;
+        const season = match.season;
 
-            if (result[season]) {
+        if (result[season]) {
                 
-                result[season] += 1;
-            } else {
+            result[season] += 1;
+        } else {
 
-                result[season] = 1;
-            }
+            result[season] = 1;
         }
+    }
         
     return result;
 }
@@ -25,11 +25,11 @@ function numberofmatchesWon(matches)    //problem2
 {
     let result = {};
     
-    for(match of matches) {
+    for(let match of matches) {
 
         if (result.hasOwnProperty(match.winner)) {
 
-            for (ele of result[match.winner]) {
+            for (let ele of result[match.winner]) {
 
                 if (ele.hasOwnProperty(match.season)) {
 
@@ -63,11 +63,11 @@ function extraRuns2016(matches, deliveries) //problem3
 
     let result = {};
 
-    for (delivery of deliveries){
+    for (let delivery of deliveries){
 
         if (delivery.extra_runs != 0) {
 
-            for(match of matches){
+            for(let match of matches){
 
                 if (match.id === delivery.match_id) {
 
