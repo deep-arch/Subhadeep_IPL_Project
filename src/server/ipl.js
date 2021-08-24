@@ -33,15 +33,15 @@ function numberofmatchesWon(matches)
 
         if (result.hasOwnProperty(match.winner)) {
 
-            for (let ele of result[match.winner]) {
+            for (let team of result[match.winner]) {
 
-                if (ele.hasOwnProperty(match.season)) {
+                if (team.hasOwnProperty(match.season)) {
 
-                     ele[match.season] += 1;
+                     team[match.season] += 1;
                 }
                 else {
 
-                    ele[match.season] = 1;
+                    team[match.season] = 1;
                 }
 
             }
@@ -118,38 +118,38 @@ function economicalBowlers2015(matches, deliveries)
     const runsByPlayer = {};
     const ballsPerPlayer = {};
 
-    for(let i of deliveries){
+    for(let delivery of deliveries){
         
-        if(matchId.includes(i.match_id)){
+        if(matchId.includes(delivery.match_id)){
 
-            if(!runsByPlayer.hasOwnProperty(i.bowler)){
+            if(!runsByPlayer.hasOwnProperty(delivery.bowler)){
 
-                runsByPlayer[i.bowler] = Number(i.total_runs);
+                runsByPlayer[delivery.bowler] = Number(delivery.total_runs);
             }else{
 
-                runsByPlayer[i.bowler] += Number(i.total_runs);
+                runsByPlayer[delivery.bowler] += Number(delivery.total_runs);
             }
 
-            if(!ballsPerPlayer.hasOwnProperty(i.bowler)){
+            if(!ballsPerPlayer.hasOwnProperty(delivery.bowler)){
 
-                ballsPerPlayer[i.bowler] = 1;
+                ballsPerPlayer[delivery.bowler] = 1;
             }else{
 
-                ballsPerPlayer[i.bowler] += 1;
+                ballsPerPlayer[delivery.bowler] += 1;
             }
 
-            if(Number(i.wide_runs) > 0 || Number(i.noball_runs) > 0){
+            if(Number(delivery.wide_runs) > 0 || Number(delivery.noball_runs) > 0){
 
-                ballsPerPlayer[i.bowler] -= 1;
+                ballsPerPlayer[delivery.bowler] -= 1;
             }
         }
     }
 
     let a = [];
 
-    for(let i in runsByPlayer){
+    for(let run in runsByPlayer){
 
-        a.push([i, Number(Number.parseFloat(runsByPlayer[i] / (ballsPerPlayer[i] / 6)).toFixed(2))]);
+        a.push([run, Number(Number.parseFloat(runsByPlayer[run] / (ballsPerPlayer[run] / 6)).toFixed(2))]);
     }
     a.sort((a, b) => {return a[1] - b[1]});
 
