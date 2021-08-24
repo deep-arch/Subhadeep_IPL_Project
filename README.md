@@ -6,38 +6,68 @@ This project is about getting several insights and information from a large set 
 ## Installation
 
 
-#### 1: Clone this repository
+
+#### 1: Install git
+
+**`For Linux`** <https://git-scm.com/downloads>
+
+**`For Windows`** <https://gitforwindows.org/>
+
+
+
+#### 2: Install Node
+
+<https://nodejs.org/en/download/>
+
+
+
+#### 3: Install VSCode
+
+<https://code.visualstudio.com/download>
+
+
+
+#### 4: Clone this repository
 
 ```sh
 git clone https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
-#### 2: Go to the working directory
+
+
+#### 5: Go to the working directory
 
 ```sh
 cd Subhadeep_IPL_Project
 ```
 
-#### 3: Install npm packages
+
+
+#### 6: Install npm packages
 
 ```sh
 npm install
 ```
 
-#### 4: Install csvtojson
+
+
+#### 7: Install csvtojson
 
 ```sh
 npm i --save csvtojson
 ```
 
-#### 5: Run the functions
+
+
+#### 8: Run the functions
 
 ```sh
 npm run start
 ```
 
 
-#### 6: Check the outputs
+
+#### 9: Check the outputs
 
 Go to the output directory using:
 
@@ -46,6 +76,7 @@ cd src/public/output
 ```
 
 Each file will contain separate outputs to the [problems](#problems).
+
 
 
 ---
@@ -67,7 +98,7 @@ Each file will contain separate outputs to the [problems](#problems).
     - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
 
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install **csvtojson** package from [step 4](#4-install-csvtojson) of Installation.
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install **csvtojson** package from [step 7](#7-install-csvtojson) of Installation.
 
 
 **csvtojson** module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
