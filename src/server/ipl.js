@@ -145,20 +145,20 @@ function economicalBowlers2015(matches, deliveries)
         }
     }
 
-    let a = [];
+    let array = [];
 
     for(let run in runsByPlayer){
 
-        a.push([run, Number(Number.parseFloat(runsByPlayer[run] / (ballsPerPlayer[run] / 6)).toFixed(2))]);
+        array.push([run, Number(Number.parseFloat(runsByPlayer[run] / (ballsPerPlayer[run] / 6)).toFixed(2))]);
     }
-    a.sort((a, b) => {return a[1] - b[1]});
+    array.sort((a, b) => {return a[1] - b[1]});
 
     let result = [];
 
-    for(let i = 0; i < 10; i++){
+    for(let index = 0; index < 10; index++){
 
-        result.push({'bowler' : a[i][0], 'economy' : a[i][1]});
-        // result.push(a[i][0]);
+        result.push({'bowler' : array[index][0], 'economy' : array[index][1]});
+        // result.push(a[index][0]);
     }
     
     return result;
