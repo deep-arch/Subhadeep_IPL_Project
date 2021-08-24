@@ -25,33 +25,33 @@ function numberofmatchesWon(matches)    //problem2
 {
     let result = {};
     
-    matches.forEach((element) => {
+    for(match of matches) {
 
-        if (result.hasOwnProperty(element.winner)) {
+        if (result.hasOwnProperty(match.winner)) {
 
-            result[element.winner].forEach((ele) => {
+            for (ele of result[match.winner]) {
 
-                if (ele.hasOwnProperty(element.season)) {
+                if (ele.hasOwnProperty(match.season)) {
 
-                     ele[element.season] += 1;
+                     ele[match.season] += 1;
                 }
                 else {
 
-                    ele[element.season] = 1;
+                    ele[match.season] = 1;
                 }
 
-            });
+            }
 
         }
         else {
 
             result1 = {};
 
-            result[element.winner] = [];
-            result1[element.season] = 1;
-            result[element.winner].push(result1);
+            result[match.winner] = [];
+            result1[match.season] = 1;
+            result[match.winner].push(result1);
         }
-    });
+    }
     
     return result;
 }
@@ -63,28 +63,29 @@ function extraRuns2016(matches, deliveries) //problem3
 
     let result = {};
 
-    deliveries.forEach((element) => {
+    for (delivery of deliveries){
 
-        if (element.extra_runs != 0) {
-            matches.forEach((ele) => {
+        if (delivery.extra_runs != 0) {
 
-                if (ele.id === element.match_id) {
+            for(match of matches){
 
-                    if (ele.season === "2016") {
+                if (match.id === delivery.match_id) {
 
-                        if (result.hasOwnProperty(element.bowling_team)) {
+                    if (match.season === "2016") {
 
-                            result[element.bowling_team] += parseInt(element.extra_runs);
+                        if (result.hasOwnProperty(delivery.bowling_team)) {
+
+                            result[delivery.bowling_team] += Number(delivery.extra_runs);
                         }
                         else {
 
-                            result[element.bowling_team] = parseInt(element.extra_runs);
+                            result[delivery.bowling_team] = Number(delivery.extra_runs);
                         }
                     }
                 }
-            });
+            }
         }
-    });
+    }
     
     return result;
 }
