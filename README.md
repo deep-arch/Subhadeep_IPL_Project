@@ -84,7 +84,7 @@ Each file will contain separate outputs to the [problems](#problems).
 ## Project Structure
 
 
-[**`src`**](/tree/master/src): This directory contains four directories:
+[**`src`**](/src): This directory contains four directories:
 
 - **`data`**: This directory contains the datasets: `matches.csv` and `deliveries.csv`.
 
