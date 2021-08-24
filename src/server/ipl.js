@@ -112,7 +112,7 @@ function economicalBowlers2015(matches, deliveries) //problem4
 
     for(let i of deliveries){
         
-        if(matchId.includes(i.match_id)){  // Calculating Runs By Player
+        if(matchId.includes(i.match_id)){
 
             if(!runsByPlayer.hasOwnProperty(i.bowler)){
 
@@ -122,7 +122,7 @@ function economicalBowlers2015(matches, deliveries) //problem4
                 runsByPlayer[i.bowler] += Number(i.total_runs);
             }
 
-            if(!ballsPerPlayer.hasOwnProperty(i.bowler)){ // Calculating Balls By Player
+            if(!ballsPerPlayer.hasOwnProperty(i.bowler)){
 
                 ballsPerPlayer[i.bowler] = 1;
             }else{
