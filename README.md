@@ -98,7 +98,7 @@ Each file will contain separate outputs to the [problems](#problems).
     - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
 
 
-**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install **csvtojson** package from [step 7](#7-install-csvtojson) of Installation.
+**`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install `csvtojson` package from [step 7](#7-install-csvtojson) of Installation.
 
 
 **csvtojson** module is a comprehensive nodejs csv parser to convert csv to json or column arrays. 
