@@ -149,7 +149,7 @@ function economicalBowlers2015(matches, deliveries)
 
     for(let i in runsByPlayer){
 
-        a.push([i, Number(Number.parseFloat(runsByPlayer[i] / (ballsPerPlayer[i]/6)).toFixed(2))]);
+        a.push([i, Number(Number.parseFloat(runsByPlayer[i] / (ballsPerPlayer[i] / 6)).toFixed(2))]);
     }
     a.sort((a, b) => {return a[1] - b[1]});
 
