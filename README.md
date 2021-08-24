@@ -86,16 +86,16 @@ Each file will contain separate outputs to the [problems](#problems).
 
 [**`src`**](/src): This directory contains four directories:
 
-- **`data`**: This directory contains the datasets: `matches.csv` and `deliveries.csv`.
+- [**`data`**](/src/data): This directory contains the datasets: `matches.csv` and `deliveries.csv`.
 
-- **`server`**
-    - **`ipl.js`**: This file contains the code (functions) which calulates the results to the [problems](#problems).
+- [**`server`**](/src/server)
+    - [**`ipl.js`**](/src/server/ipl.js): This file contains the code (functions) which calulates the results to the [problems](#problems).
 
-    - **`index.js`**: This file contains the code which: 1. Reads csv data from dataset. 2. Imports and executes all the functions from **`ipl.js`**. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
+    - [**`index.js`**](/src/server/index.js): This file contains the code which: 1. Reads csv data from dataset. 2. Imports and executes all the functions from **`ipl.js`**. 3. Stores the solution of each problem in separate output files (.json files) in `src/public/output` directory.
 
-- **`public`**: This directory contains a directory named `output`.
+- [**`public`**](/src/public): This directory contains a directory named `output`.
 
-    - **`output`**: This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
+    - [**`output`**](/src/public/output): This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
 
 
 **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install `csvtojson` package from [step 7](#7-install-csvtojson) of Installation.
