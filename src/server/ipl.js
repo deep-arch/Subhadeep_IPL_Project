@@ -158,7 +158,7 @@ function economicalBowlers2015(matches, deliveries)
     for(let index = 0; index < 10; index++){
 
         result.push({'bowler' : array[index][0], 'economy' : array[index][1]});
-        // result.push(a[index][0]);
+        // result.push(array[index][0]);
     }
     
     return result;
