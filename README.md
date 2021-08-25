@@ -24,7 +24,7 @@ This project is about getting several insights and information from a large set 
 
 ```
 Press Ctrl + Alt + T
-``
+```
 
 
 #### 4: Clone this repository
