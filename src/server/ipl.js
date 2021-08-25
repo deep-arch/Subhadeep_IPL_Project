@@ -95,7 +95,6 @@ function economicalBowlers2015(matches, deliveries) {
   });
   let ecoBowler = [];
   for (let values in runsbyPlayer) {
-    //console.log(i)
     ecoBowler.push([
       values,
       Number(
@@ -112,7 +111,7 @@ function economicalBowlers2015(matches, deliveries) {
   let result = [];
 
   for (let index = 0; index < 10; index++) {
-    result.push({ bowler: ecoBowler[index][0], economy: ecoBowler[index][1] }); //storing into resultant array in the form of [{name: xyz , Economy:number}]
+    result.push({ bowler: ecoBowler[index][0], economy: ecoBowler[index][1] }); //storing into resultant array in the form of [{name: xyz , economy:number}]
   }
   return result;
 }

@@ -29,8 +29,9 @@ Press Ctrl + Alt + T
 
 #### 4: Clone this repository
 
+
 ```sh
-git clone https://github.com/deep-arch/Subhadeep_IPL_Project.git
+git clone -b usinghof https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
 
