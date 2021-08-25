@@ -52,21 +52,21 @@ function numberofmatchesWon(matches)
 {
     let result = {};
     matches.forEach((match) => {
-        if (result.hasOwnProperty(match.winner)) {
-            result[match.winner].find((season) => {
-                if (season.hasOwnProperty(match.season)) {
-                season[match.season] += 1;
-            }
-            else{
-                season[match.season] = 1;
-            }
-        });
-        } else {
-            let season = {};
-            result[match.winner] = [];
+      if (result.hasOwnProperty(match.winner)) {
+        result[match.winner].find((season) => {
+          if (season.hasOwnProperty(match.season)) {
+            season[match.season] += 1;
+          }
+          else{
             season[match.season] = 1;
-            result[match.winner].push(season);
-        }
+          }
+        });
+      } else {
+        let season = {};
+        result[match.winner] = [];
+        season[match.season] = 1;
+        result[match.winner].push(season);
+      }
     });
     return result;
 }
@@ -99,7 +99,6 @@ function numberofmatchesWon(matches)
 function extraRuns2016(matches, deliveries) 
 {
     let result = {};
-
     deliveries.forEach((delivery) => {
         if (delivery.extra_runs != 0) {
             matches.forEach((match) => {
@@ -116,7 +115,6 @@ function extraRuns2016(matches, deliveries)
             });
         }
     });
-    
     return result;
 }
 
@@ -125,7 +123,6 @@ function extraRuns2016(matches, deliveries)
 function economicalBowlers2015(matches, deliveries) 
 {
     let matchId = [];
-
     for (let match of matches) {
         const season = match.season;
         if (season === '2015') {
@@ -134,8 +131,7 @@ function economicalBowlers2015(matches, deliveries)
     }
     const runsByPlayer = {};
     const ballsPerPlayer = {};
-    
-    for(let delivery of deliveries){
+    for(let delivery of deliveries){       
         if(matchId.includes(delivery.match_id)){
             if(!runsByPlayer.hasOwnProperty(delivery.bowler)){
                 runsByPlayer[delivery.bowler] = Number(delivery.total_runs);
@@ -152,7 +148,6 @@ function economicalBowlers2015(matches, deliveries)
             }
         }
     }
-
     let array = [];
     for(let run in runsByPlayer){
         array.push([run, Number(Number.parseFloat(runsByPlayer[run] / (ballsPerPlayer[run] / 6)).toFixed(2))]);
@@ -162,7 +157,7 @@ function economicalBowlers2015(matches, deliveries)
     for(let index = 0; index < 10; index++){
         result.push({'bowler' : array[index][0], 'economy' : array[index][1]});
         // result.push(array[index][0]);
-    }    
+    }   
     return result;
 }
 
