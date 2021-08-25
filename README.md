@@ -14,18 +14,17 @@ This project is about getting several insights and information from a large set 
 
 
 
-#### 2: Open Terminal
+#### 2: Install Node
+
+<https://nodejs.org/en/download/>
+
+
+
+#### 3: Open Terminal
 
 ```
 Press Ctrl + Alt + T
-```
-
-
-
-#### 3: Install VSCode
-
-<https://code.visualstudio.com/download>
-
+``
 
 
 #### 4: Clone this repository
