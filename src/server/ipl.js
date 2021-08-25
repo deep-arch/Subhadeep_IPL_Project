@@ -106,12 +106,12 @@ function economicalBowlers2015(matches, deliveries) {
   }
   ecoBowler.sort((a, b) => {
     return a[1] - b[1];
-  }); //sorting for getting Top 10 players and economy
+  });
 
   let result = [];
 
   for (let index = 0; index < 10; index++) {
-    result.push({ bowler: ecoBowler[index][0], economy: ecoBowler[index][1] }); //storing into resultant array in the form of [{name: xyz , economy:number}]
+    result.push({ bowler: ecoBowler[index][0], economy: ecoBowler[index][1] });
   }
   return result;
 }
