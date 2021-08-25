@@ -1,60 +1,108 @@
 //Problem 1:   Number of matches played per year for all the years in IPL.
 
+// function numberofmatchesPlayed(matches) 
+// {    
+//     const result = {};
+  
+//     for (let match of matches) {
+//         const season = match.season;
+//         if (result[season]) {         
+//             result[season] += 1;
+//         } else {
+//             result[season] = 1;
+//         }
+//     }    
+//     return result;
+// }
+
 function numberofmatchesPlayed(matches) 
 {    
-    const result = {};
-  
-    for (let match of matches) {
-        const season = match.season;
-        if (result[season]) {         
-            result[season] += 1;
-        } else {
-            result[season] = 1;
-        }
-    }    
-    return result;
+    return result = matches.reduce((numberofMatches, match) =>
+    (numberofMatches[match.season] = numberofMatches[match.season] + 1 || 1, numberofMatches), {});
 }
 
-
-
 //Problem 2:   Number of matches won per team per year in IPL.
+
+// function numberofmatchesWon(matches)    
+// {
+//     let result = {};
+    
+//     for(let match of matches) {
+//         if (result.hasOwnProperty(match.winner)) {
+//             for (let team of result[match.winner]) {
+//                 if (team.hasOwnProperty(match.season)) {
+//                     team[match.season] += 1;
+//                 }
+//                 else {
+//                     team[match.season] = 1;
+//                 }
+//             }
+//         }
+//         else {
+//             result1 = {};
+//             result[match.winner] = [];
+//             result1[match.season] = 1;
+//             result[match.winner].push(result1);
+//         }
+//     }    
+//     return result;
+// }
 
 function numberofmatchesWon(matches)    
 {
     let result = {};
-    
-    for(let match of matches) {
+    matches.forEach((match) => {
         if (result.hasOwnProperty(match.winner)) {
-            for (let team of result[match.winner]) {
-                if (team.hasOwnProperty(match.season)) {
-                     team[match.season] += 1;
-                }
-                else {
-                    team[match.season] = 1;
-                }
+            result[match.winner].find((season) => {
+                if (season.hasOwnProperty(match.season)) {
+                season[match.season] += 1;
             }
-        }
-        else {
-            result1 = {};
+            else{
+                season[match.season] = 1;
+            }
+        });
+        } else {
+            let season = {};
             result[match.winner] = [];
-            result1[match.season] = 1;
-            result[match.winner].push(result1);
+            season[match.season] = 1;
+            result[match.winner].push(season);
         }
-    }    
+    });
     return result;
 }
 
-
-
 //Problem 3:   Extra runs conceded per team in the year 2016.
+
+// function extraRuns2016(matches, deliveries) 
+// {
+//     let result = {};
+
+//     for (let delivery of deliveries){
+//         if (delivery.extra_runs != 0) {
+//             for(let match of matches){
+//                 if (match.id === delivery.match_id) {
+//                     if (match.season === "2016") {
+//                         if (result.hasOwnProperty(delivery.bowling_team)) {
+//                             result[delivery.bowling_team] += Number(delivery.extra_runs);
+//                         }
+//                         else {
+//                             result[delivery.bowling_team] = Number(delivery.extra_runs);
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }  
+//     return result;
+// }
 
 function extraRuns2016(matches, deliveries) 
 {
     let result = {};
 
-    for (let delivery of deliveries){
+    deliveries.forEach((delivery) => {
         if (delivery.extra_runs != 0) {
-            for(let match of matches){
+            matches.forEach((match) => {
                 if (match.id === delivery.match_id) {
                     if (match.season === "2016") {
                         if (result.hasOwnProperty(delivery.bowling_team)) {
@@ -65,14 +113,12 @@ function extraRuns2016(matches, deliveries)
                         }
                     }
                 }
-            }
+            });
         }
-    }
+    });
     
     return result;
 }
-
-
 
 //Problem 4:   Top 10 economical bowlers in the year 2015.
 
@@ -119,6 +165,5 @@ function economicalBowlers2015(matches, deliveries)
     }    
     return result;
 }
-
 
 module.exports = {numberofmatchesPlayed, numberofmatchesWon, extraRuns2016, economicalBowlers2015};
