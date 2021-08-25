@@ -9,9 +9,7 @@ This project is about getting several insights and information from a large set 
 
 #### 1: Install git
 
-**`For Linux`** <https://git-scm.com/downloads>
-
-**`For Windows`** <https://gitforwindows.org/>
+<https://git-scm.com/downloads>
 
 
 
@@ -21,10 +19,11 @@ This project is about getting several insights and information from a large set 
 
 
 
-#### 3: Install VSCode
+#### 3: Open Terminal
 
-<https://code.visualstudio.com/download>
-
+```
+Press Ctrl + Alt + T
+```
 
 
 #### 4: Clone this repository
