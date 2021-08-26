@@ -69,8 +69,8 @@ function extraRuns2016(matches, deliveries) {
 function economicalBowlers2015(matches, deliveries) {
   const runsbyPlayer = {};
   const ballsbyPlayer = {};
-  deliveries.filter((delivery) => {
-    matches.filter((match) => {
+  deliveries.find((delivery) => {
+    matches.find((match) => {
       if (delivery.match_id === match.id) {
         if (match.season === "2015") {
           if (!runsbyPlayer.hasOwnProperty(delivery.bowler)) {

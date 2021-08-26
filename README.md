@@ -121,3 +121,7 @@ Calculate the following-
 **3. Extra runs conceded per team in the year 2016.**
 
 **4. Top 10 economical bowlers in the year 2015.**
+
+---
+
+##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`usinghof`** where the functins are refactored using higer order functions.**
