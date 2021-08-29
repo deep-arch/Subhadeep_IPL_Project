@@ -70,10 +70,7 @@ npm run start
 
 #### 9: Check the result
 
-Open any browser and search 
-```
-http://localhost:8000/
-```
+To check the result click [``here``](http://localhost:8000/)
 
 The results to the [problems](#problems) are plotted in respective bar-graphs.
 
