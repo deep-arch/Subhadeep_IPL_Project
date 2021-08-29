@@ -31,7 +31,7 @@ Press Ctrl + Alt + T
 
 
 ```sh
-git clone -b usinghof https://github.com/deep-arch/Subhadeep_IPL_Project.git
+git clone -b plot https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
 
@@ -68,15 +68,14 @@ npm run start
 
 
 
-#### 9: Check the outputs
+#### 9: Check the result
 
-Go to the output directory using:
-
-```sh
-cd src/public/output
+Open any browser and search 
+```
+http://localhost:8000/
 ```
 
-Each file will contain separate outputs to the [problems](#problems).
+The results to the [problems](#problems) are plotted in respective bar-graphs.
 
 
 
@@ -97,6 +96,9 @@ Each file will contain separate outputs to the [problems](#problems).
 - [**`public`**](/src/public): This directory contains a directory named `output`.
 
     - [**`output`**](/src/public/output): This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
+    - [**`index.html`**](/src/public/index.html): This file contains the html.
+    - [**`viz.js`**](/src/public/index.html): This file conains the visualisation logic for plotting the results from [output](/src/public/output).
+
 
 
 **`node_modules`**: This directory is used by node and npm to store third party packages like `csvtojson`. It will appear once you install `csvtojson` package from [step 7](#7-install-csvtojson) of Installation.
@@ -124,4 +126,4 @@ Calculate the following-
 
 ---
 
-##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`usinghof`** where the functions are refactored using higher order functions.**
+##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`plot`** where the functions are refactored using higher order functions and then the result is plotted using highcharts.**
