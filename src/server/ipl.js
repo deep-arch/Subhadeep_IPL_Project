@@ -26,13 +26,15 @@ function numberofmatchesWon(matches) {
       }
       (seasonMatches[season][winner] = seasonMatches[season][winner] + 1 || 1),
         seasonMatches;
+      //seasonMatches[season][winner] = winner in seasonMatches[season] ? seasonMatches[season][winner] + 1 : 1;
     }
     return seasonMatches;
   }, {});
 
   result = Object.entries(result).reduce((seasonMatches, [year, victory]) => {
     Object.entries(victory).forEach(([team, wins]) => {
-      seasonMatches.push({ year: Number(year), team: team, wins: wins });
+      if (team !== "")
+        seasonMatches.push({ year: Number(year), team: team, wins: wins });
     });
     return seasonMatches;
   }, []);
@@ -68,7 +70,7 @@ function extraRuns2016(matches, deliveries) {
       extraRuns2016[extraruns.bowling_team] = Number(extraruns.extra_runs);
     }
   });
-  
+
   result = Object.entries(extraRuns2016).reduce(
     (subjectTeams, [team, extra_runs]) => {
       subjectTeams.push({ team: team, extra_runs: extra_runs });
