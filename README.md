@@ -94,6 +94,7 @@ The results to the [problems](#problems) are plotted in respective bar-graphs.
 
     - [**`output`**](/src/public/output): This directory contains 4 output files with named as `numberofmatchesPlayed.json`, `numberofmatchesWon.json`, `extraRuns2016.json` and `economicalBowlers2015.json`.
     - [**`index.html`**](/src/public/index.html): This file contains the html.
+    - [**`style.css`**](/src/public/index.html): This file is used to add background image to the project visualisation.
     - [**`viz.js`**](/src/public/index.html): This file conains the visualisation logic for plotting the results from [output](/src/public/output).
 
 
