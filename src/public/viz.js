@@ -10,12 +10,13 @@ function plot1(JSONData) {
       type: "column",
       zoomType: "x",
       borderRadius: 20,
+      backgroundColor: "#F5FFFA",
     },
     credits: {
       enabled: false,
     },
     tooltip: {
-      backgroundColor: "#333333",
+      backgroundColor: "#000000",
       borderRadius: 20,
       style: {
         color: "#ffffff",
@@ -24,18 +25,26 @@ function plot1(JSONData) {
     xAxis: {
       title: {
         text: "Years",
+        style: {
+          color: "#008B8B"
+        }
       },
       categories: JSONData.map(({ year }) => year),
     },
     yAxis: {
       title: {
         text: "Matches",
+        style: {
+          color: "#008B8B"
+        }
       },
     },
     series: [
       {
         name: "Matches",
         data: JSONData.map(({ matches }) => matches),
+        color: "#008B8B",
+        borderRadius: 10
       },
     ],
   });
@@ -90,6 +99,7 @@ function plot2(JSONData) {
       type: "column",
       zoomType: "x",
       borderRadius: 20,
+      backgroundColor: "#F5FFFA",
     },
     credits: {
       enabled: false,
@@ -104,12 +114,18 @@ function plot2(JSONData) {
     xAxis: {
       title: {
         text: "Years",
+        style: {
+          color: "#008B8B"
+        }
       },
       categories: years,
     },
     yAxis: {
       title: {
         text: "Wins",
+        style: {
+          color: "#008B8B"
+        }
       },
     },
     series: series,
@@ -128,6 +144,7 @@ function plot3(JSONData) {
       type: "column",
       zoomType: "x",
       borderRadius: 20,
+      backgroundColor: "#F5FFFA",
     },
     credits: {
       enabled: false,
@@ -142,18 +159,26 @@ function plot3(JSONData) {
     xAxis: {
       title: {
         text: "Teams",
+        style: {
+          color: "#008B8B"
+        }
       },
       categories: JSONData.map(({ team }) => team),
     },
     yAxis: {
       title: {
         text: "Extra Runs",
+        style: {
+          color: "#008B8B"
+        }
       },
     },
     series: [
       {
         name: "Extra Runs",
         data: JSONData.map(({ extra_runs }) => extra_runs),
+        color: "#008B8B",
+        borderRadius: 10
       },
     ],
   });
@@ -171,6 +196,7 @@ function plot4(JSONData) {
       type: "column",
       zoomType: "x",
       borderRadius: 20,
+      backgroundColor: "#F5FFFA",
     },
     credits: {
       enabled: false,
@@ -185,18 +211,26 @@ function plot4(JSONData) {
     xAxis: {
       title: {
         text: "Bowlers",
+        style: {
+          color: "#008B8B"
+        }
       },
       categories: JSONData.map(({ bowler }) => bowler),
     },
     yAxis: {
       title: {
         text: "Economy",
+        style: {
+          color: "#008B8B"
+        }
       },
     },
     series: [
       {
         name: "Economy",
         data: JSONData.map(({ economy }) => economy),
+        color: "#008B8B",
+        borderRadius: 10
       },
     ],
   });
