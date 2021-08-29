@@ -8,6 +8,7 @@ function numberofmatchesPlayed(matches) {
     ),
     {}
   );
+
   result = Object.entries(result).reduce((numberofMatches, [year, matches]) => {
     numberofMatches.push({ year: Number(year), matches: matches });
     return numberofMatches;
@@ -67,6 +68,7 @@ function extraRuns2016(matches, deliveries) {
       extraRuns2016[extraruns.bowling_team] = Number(extraruns.extra_runs);
     }
   });
+  
   result = Object.entries(extraRuns2016).reduce(
     (subjectTeams, [team, extra_runs]) => {
       subjectTeams.push({ team: team, extra_runs: extra_runs });
