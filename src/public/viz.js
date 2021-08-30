@@ -29,11 +29,21 @@ function viz1(JSONData) {
           color: "#405795",
         },
       },
+      labels: {
+        style: {
+          color: "#405795",
+        },
+      },
       categories: JSONData.map(({ year }) => year),
     },
     yAxis: {
       title: {
         text: "Matches",
+        style: {
+          color: "#405795",
+        },
+      },
+      labels: {
         style: {
           color: "#405795",
         },
@@ -117,11 +127,21 @@ function viz2(JSONData) {
           color: "#405795",
         },
       },
+      labels: {
+        style: {
+          color: "#405795",
+        },
+      },
       categories: teamsAndyears[1],
     },
     yAxis: {
       title: {
         text: "Wins",
+        style: {
+          color: "#405795",
+        },
+      },
+      labels: {
         style: {
           color: "#405795",
         },
@@ -162,11 +182,21 @@ function viz3(JSONData) {
           color: "#405795",
         },
       },
+      labels: {
+        style: {
+          color: "#405795",
+        },
+      },
       categories: JSONData.map(({ team }) => team),
     },
     yAxis: {
       title: {
         text: "Extra Runs",
+        style: {
+          color: "#405795",
+        },
+      },
+      labels: {
         style: {
           color: "#405795",
         },
@@ -214,11 +244,21 @@ function viz4(JSONData) {
           color: "#405795",
         },
       },
+      labels: {
+        style: {
+          color: "#405795",
+        },
+      },
       categories: JSONData.map(({ bowler }) => bowler),
     },
     yAxis: {
       title: {
         text: "Economy",
+        style: {
+          color: "#405795",
+        },
+      },
+      labels: {
         style: {
           color: "#405795",
         },
