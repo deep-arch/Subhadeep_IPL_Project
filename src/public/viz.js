@@ -26,8 +26,8 @@ function viz1(JSONData) {
       title: {
         text: "Years",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
       categories: JSONData.map(({ year }) => year),
     },
@@ -35,8 +35,8 @@ function viz1(JSONData) {
       title: {
         text: "Matches",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
     },
     series: [
@@ -44,7 +44,7 @@ function viz1(JSONData) {
         name: "Matches",
         data: JSONData.map(({ matches }) => matches),
         color: "#87B41C",
-        borderRadius: 10
+        borderRadius: 10,
       },
     ],
   });
@@ -54,30 +54,29 @@ fetch("./output/numberofmatchesWon.json")
   .then((response) => response.json())
   .then((JSONData) => viz2(JSONData));
 function viz2(JSONData) {
-  const teams = JSONData.reduce((subjectTeams, { team }) => {
-    if (!subjectTeams.includes(team)) {
-      subjectTeams.push(team);
-    }
-    return subjectTeams;
-  }, []).sort((teamA, teamB) => teamA.localeCompare(teamB));
-
-  const years = JSONData.reduce((subjectYears, { year }) => {
-    if (!subjectYears.includes(year)) {
-      subjectYears.push(year);
-    }
-    return subjectYears;
-  }, []);
+  const teamsAndyears = JSONData.reduce(
+    (subject, { team, year }) => {
+      if (!subject[0].includes(team)) {
+        subject[0].push(team);
+      }
+      if (!subject[1].includes(year)) {
+        subject[1].push(year);
+      }
+      return subject;
+    },
+    [[], []]
+  );
 
   const newSeries = [];
-  teams.forEach((currentTeam) => {
+  teamsAndyears[0].forEach((currentTeam) => {
     let series2Push = {
       name: currentTeam,
       data: [],
     };
     let wins2Push = 0;
-    years.forEach((currYear) => {
+    teamsAndyears[1].forEach((currentYear) => {
       JSONData.forEach(({ year, team, wins }) => {
-        if (team === currentTeam && year === currYear) {
+        if (team === currentTeam && year === currentYear) {
           wins2Push = wins;
         }
       });
@@ -115,17 +114,17 @@ function viz2(JSONData) {
       title: {
         text: "Years",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
-      categories: years,
+      categories: teamsAndyears[1],
     },
     yAxis: {
       title: {
         text: "Wins",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
     },
     series: newSeries,
@@ -160,8 +159,8 @@ function viz3(JSONData) {
       title: {
         text: "Teams",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
       categories: JSONData.map(({ team }) => team),
     },
@@ -169,8 +168,8 @@ function viz3(JSONData) {
       title: {
         text: "Extra Runs",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
     },
     series: [
@@ -178,7 +177,7 @@ function viz3(JSONData) {
         name: "Extra Runs",
         data: JSONData.map(({ extra_runs }) => extra_runs),
         color: "#87B41C",
-        borderRadius: 10
+        borderRadius: 10,
       },
     ],
   });
@@ -212,8 +211,8 @@ function viz4(JSONData) {
       title: {
         text: "Bowlers",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
       categories: JSONData.map(({ bowler }) => bowler),
     },
@@ -221,8 +220,8 @@ function viz4(JSONData) {
       title: {
         text: "Economy",
         style: {
-          color: "#405795"
-        }
+          color: "#405795",
+        },
       },
     },
     series: [
@@ -230,7 +229,7 @@ function viz4(JSONData) {
         name: "Economy",
         data: JSONData.map(({ economy }) => economy),
         color: "#87B41C",
-        borderRadius: 10
+        borderRadius: 10,
       },
     ],
   });
