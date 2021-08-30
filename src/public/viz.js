@@ -26,7 +26,7 @@ function plot1(JSONData) {
       title: {
         text: "Years",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
       categories: JSONData.map(({ year }) => year),
@@ -35,7 +35,7 @@ function plot1(JSONData) {
       title: {
         text: "Matches",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
     },
@@ -43,7 +43,7 @@ function plot1(JSONData) {
       {
         name: "Matches",
         data: JSONData.map(({ matches }) => matches),
-        color: "#34A56F",
+        color: "#87B41C",
         borderRadius: 10
       },
     ],
@@ -68,22 +68,22 @@ function plot2(JSONData) {
     return subjectYears;
   }, []);
 
-  const series = [];
+  const newSeries = [];
   teams.forEach((currentTeam) => {
-    let pushSeries = {
+    let series2Push = {
       name: currentTeam,
       data: [],
     };
-    let pushWins = 0;
+    let wins2Push = 0;
     years.forEach((currYear) => {
       JSONData.forEach(({ year, team, wins }) => {
         if (team === currentTeam && year === currYear) {
-          pushWins = wins;
+          wins2Push = wins;
         }
       });
-      pushSeries["data"].push(pushWins);
+      series2Push["data"].push(wins2Push);
     });
-    series.push(pushSeries);
+    newSeries.push(series2Push);
   });
 
   Highcharts.chart("numberofmatchesWon", {
@@ -115,7 +115,7 @@ function plot2(JSONData) {
       title: {
         text: "Years",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
       categories: years,
@@ -124,11 +124,11 @@ function plot2(JSONData) {
       title: {
         text: "Wins",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
     },
-    series: series,
+    series: newSeries,
   });
 }
 
@@ -160,7 +160,7 @@ function plot3(JSONData) {
       title: {
         text: "Teams",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
       categories: JSONData.map(({ team }) => team),
@@ -169,7 +169,7 @@ function plot3(JSONData) {
       title: {
         text: "Extra Runs",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
     },
@@ -177,7 +177,7 @@ function plot3(JSONData) {
       {
         name: "Extra Runs",
         data: JSONData.map(({ extra_runs }) => extra_runs),
-        color: "#3CB371",
+        color: "#87B41C",
         borderRadius: 10
       },
     ],
@@ -212,7 +212,7 @@ function plot4(JSONData) {
       title: {
         text: "Bowlers",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
       categories: JSONData.map(({ bowler }) => bowler),
@@ -221,7 +221,7 @@ function plot4(JSONData) {
       title: {
         text: "Economy",
         style: {
-          color: "#008B8B"
+          color: "#405795"
         }
       },
     },
@@ -229,7 +229,7 @@ function plot4(JSONData) {
       {
         name: "Economy",
         data: JSONData.map(({ economy }) => economy),
-        color: "#3CB371",
+        color: "#87B41C",
         borderRadius: 10
       },
     ],
