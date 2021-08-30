@@ -1,7 +1,7 @@
 fetch("./output/numberofmatchesPlayed.json")
   .then((response) => response.json())
-  .then((JSONData) => plot1(JSONData));
-function plot1(JSONData) {
+  .then((JSONData) => viz1(JSONData));
+function viz1(JSONData) {
   Highcharts.chart("numberofmatchesPlayed", {
     title: {
       text: "1. Matches Played per Season in IPL",
@@ -52,8 +52,8 @@ function plot1(JSONData) {
 
 fetch("./output/numberofmatchesWon.json")
   .then((response) => response.json())
-  .then((JSONData) => plot2(JSONData));
-function plot2(JSONData) {
+  .then((JSONData) => viz2(JSONData));
+function viz2(JSONData) {
   const teams = JSONData.reduce((subjectTeams, { team }) => {
     if (!subjectTeams.includes(team)) {
       subjectTeams.push(team);
@@ -134,8 +134,8 @@ function plot2(JSONData) {
 
 fetch("./output/extraRuns2016.json")
   .then((response) => response.json())
-  .then((JSONData) => plot3(JSONData));
-function plot3(JSONData) {
+  .then((JSONData) => viz3(JSONData));
+function viz3(JSONData) {
   Highcharts.chart("extraRuns2016", {
     title: {
       text: "3. Extra Runs conceded per Team in the Year 2016",
@@ -186,8 +186,8 @@ function plot3(JSONData) {
 
 fetch("./output/economicalBowlers2015.json")
   .then((response) => response.json())
-  .then((JSONData) => plot4(JSONData));
-function plot4(JSONData) {
+  .then((JSONData) => viz4(JSONData));
+function viz4(JSONData) {
   Highcharts.chart("economicalBowlers2015", {
     title: {
       text: "4. Top 10 Economical Bowlers in the Year 2015",
