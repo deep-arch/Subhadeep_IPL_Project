@@ -43,7 +43,7 @@ function plot1(JSONData) {
       {
         name: "Matches",
         data: JSONData.map(({ matches }) => matches),
-        color: "#008B8B",
+        color: "#34A56F",
         borderRadius: 10
       },
     ],
@@ -177,7 +177,7 @@ function plot3(JSONData) {
       {
         name: "Extra Runs",
         data: JSONData.map(({ extra_runs }) => extra_runs),
-        color: "#008B8B",
+        color: "#3CB371",
         borderRadius: 10
       },
     ],
@@ -229,7 +229,7 @@ function plot4(JSONData) {
       {
         name: "Economy",
         data: JSONData.map(({ economy }) => economy),
-        color: "#008B8B",
+        color: "#3CB371",
         borderRadius: 10
       },
     ],
