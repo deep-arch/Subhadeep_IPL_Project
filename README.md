@@ -124,4 +124,4 @@ Calculate the following-
 
 ---
 
-##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`plot`** where the functions are refactored using higher order functions and then the result is plotted using highcharts.**
+##### **When you are cloning the repository using [step 4](#4-clone-this-repository), it clones the repository from a different branch **`chaining`** where the functions are refactored using chained higher order array functions and then the result is plotted using highcharts.**
