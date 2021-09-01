@@ -64,36 +64,35 @@ fetch("./output/numberofmatchesWon.json")
   .then((response) => response.json())
   .then((JSONData) => viz2(JSONData));
 function viz2(JSONData) {
-  const teamsAndyears = JSONData.reduce(
-    (subject, { team, year }) => {
-      if (!subject[0].includes(team)) {
-        subject[0].push(team);
-      }
-      if (!subject[1].includes(year)) {
-        subject[1].push(year);
-      }
-      return subject;
-    },
-    [[], []]
-  );
-
-  const newSeries = [];
-  teamsAndyears[0].forEach((currentTeam) => {
-    let series2Push = {
-      name: currentTeam,
-      data: [],
-    };
-    let wins2Push = 0;
-    teamsAndyears[1].forEach((currentYear) => {
-      JSONData.forEach(({ year, team, wins }) => {
-        if (team === currentTeam && year === currentYear) {
-          wins2Push = wins;
+  const teamsAndyears = JSONData
+    .reduce(
+      (subject, { team, year }) => {
+        if (!subject[0].includes(team)) {
+          subject[0].push(team);
         }
+        if (!subject[1].includes(year)) {
+          subject[1].push(year);
+        }
+        return subject;
+      },
+      [[], []])
+  const teamSeries = teamsAndyears[0]
+    .reduce((subject, currentTeam) => {
+      const newSeries = [];
+    teamsAndyears[1]
+      .forEach((currentYear) => {
+        const rIndex = JSONData.findIndex(({year, team}) => team === currentTeam && year === currentYear);
+        if(rIndex === -1)
+          newSeries.push(0);
+        else
+          newSeries.push(JSONData[rIndex]['wins']);
+      })
+      subject.push({
+          name: currentTeam,
+          data: newSeries
       });
-      series2Push["data"].push(wins2Push);
-    });
-    newSeries.push(series2Push);
-  });
+      return subject;
+    }, []);
 
   Highcharts.chart("numberofmatchesWon", {
     title: {
@@ -147,7 +146,7 @@ function viz2(JSONData) {
         },
       },
     },
-    series: newSeries,
+    series: teamSeries,
   });
 }
 

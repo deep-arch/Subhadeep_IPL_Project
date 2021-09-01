@@ -1,15 +1,13 @@
 const fs = require("fs");
 
+const result = require("./ipl");
 const matches = "../data/matches.csv";
 const deliveries = "../data/deliveries.csv";
 const csv = require("csvtojson");
-const result = require("./ipl");
 
 csv()
   .fromFile(matches)
   .then((datamatches) => {
-    //console.log(datamatches);
-
     //problem1
 
     fs.writeFile(
@@ -43,8 +41,6 @@ csv()
     csv()
       .fromFile(deliveries)
       .then((datadeliveries) => {
-        //  console.log(datadeliveries);
-        //  console.log(datamatches);
 
         //problem3
 
