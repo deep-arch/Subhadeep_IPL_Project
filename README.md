@@ -31,7 +31,7 @@ Press Ctrl + Alt + T
 
 
 ```sh
-git clone -b plot https://github.com/deep-arch/Subhadeep_IPL_Project.git
+git clone -b chaining https://github.com/deep-arch/Subhadeep_IPL_Project.git
 ```
 
 
