@@ -1,9 +1,8 @@
 //Problem 1:   Number of matches played per year for all the years in IPL.
 
 function numberofmatchesPlayed(matches) {
-let arrayM = matches;
 
-  return Object.entries(arrayM
+  return Object.entries(matches
     .reduce((numberofMatches, match) => {
       numberofMatches[match.season] = numberofMatches[match.season] + 1 || 1;
       return numberofMatches;
@@ -20,9 +19,9 @@ let arrayM = matches;
 //Problem 2:   Number of matches won per team per year in IPL.
 
 function numberofmatchesWon(matches) {
-let arrayM = matches;
 
-  return Object.entries(arrayM
+  return Object
+    .entries(matches
     .reduce((seasonMatches, { season, winner }) => {
       if (winner !== null) {
         if (!(season in seasonMatches)) {
@@ -33,23 +32,22 @@ let arrayM = matches;
       }
       return seasonMatches;
     }, {}))
-    .reduce((seasonMatches, [year, victory]) => {
+    .reduce((seasonMatches, [ year, victory ]) => {
         Object
-        .entries(victory).forEach(([team, wins]) => {
+        .entries(victory)
+        .filter(([team, wins]) => {
           if (team !== "")
             seasonMatches.push({ year: Number(year), team: team, wins: wins });
         });
         return seasonMatches;
-      }, []);
+    }, []);
 }
 
 //Problem 3:   Extra runs conceded per team in the year 2016.
 
 function extraRuns2016(matches, deliveries) {
-  let arrayM = matches;
-  let arrayD = deliveries;
 
-  let match = arrayM
+  let match = matches
     .filter((matchData) => {
       if (matchData.season === "2016") {
         return matchData.id;
@@ -58,7 +56,7 @@ function extraRuns2016(matches, deliveries) {
 
   const extraRuns2016 = {};
 
-  arrayD
+  deliveries
     .filter((deliveryData) => {
       if (
         deliveryData.extra_runs != 0 &&
@@ -67,16 +65,16 @@ function extraRuns2016(matches, deliveries) {
             return 1;
           }
         })
-      ) {
+      )
         return deliveryData;
-      }
     })
-    .forEach((extraruns) => {
-      if (extraRuns2016.hasOwnProperty(extraruns.bowling_team)) {
-        extraRuns2016[extraruns.bowling_team] += Number(extraruns.extra_runs);
+    .filter(({ bowling_team, extra_runs }) => {
+      if (extraRuns2016.hasOwnProperty(bowling_team)) {
+        extraRuns2016[bowling_team] += Number(extra_runs);
       } else {
-        extraRuns2016[extraruns.bowling_team] = Number(extraruns.extra_runs);
+        extraRuns2016[bowling_team] = Number(extra_runs);
       }
+      return extraRuns2016;
     });
    return Object
     .entries(extraRuns2016)
@@ -95,12 +93,9 @@ function economicalBowlers2015(matches, deliveries) {
   const runsbyPlayer = {};
   const ballsbyPlayer = {};
 
-  let arrayM = matches;
-  let arrayD = deliveries;
-
-  arrayD
+  deliveries
     .find((delivery) => {
-      arrayM
+      matches
         .find((match) => {
           if (delivery.match_id === match.id) {
             if (match.season === "2015") {
