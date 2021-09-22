@@ -12,7 +12,7 @@ csv()
 
     let results = result.numberofmatchesPlayed(datamatches);
     saveToFile("../public/output/numberofmatchesPlayed.json", results);
-    
+
     //problem2
 
     results = result.numberofmatchesWon(datamatches);
@@ -31,20 +31,14 @@ csv()
         results = result.economicalBowlers2015(datamatches, datadeliveries);
         saveToFile("../public/output/economicalBowlers2015.json", results);
       });
-  })
+  });
 
-  function saveToFile(location, data){
-    fs
-      .writeFile(
-        location,
-        JSON.stringify(data),
-        (err) => {
-          if (err){
-            throw err;
-          }
-          else{
-            console.log("JSON file has been saved in", location);
-          }
-        }
-      )
-  }
+function saveToFile(location, data) {
+  fs.writeFile(location, JSON.stringify(data), (err) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log("JSON file has been saved in", location);
+    }
+  });
+}
