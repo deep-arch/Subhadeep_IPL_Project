@@ -1,0 +1,5 @@
+body {
+  background: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3JpY2tldHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80")
+    repeat fixed 100%;
+  background-size: 1428px 725px;
+}
