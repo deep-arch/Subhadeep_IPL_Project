@@ -1,85 +1,44 @@
 const fs = require("fs");
 
+const result = require("./ipl");
 const matches = "../data/matches.csv";
 const deliveries = "../data/deliveries.csv";
-
 const csv = require("csvtojson");
-
-const result = require("./ipl");
 
 csv()
   .fromFile(matches)
   .then((datamatches) => {
-    //console.log(datamatches);
     //problem1
-    fs.writeFile(
-      "../public/output/numberofmatchesPlayed.json",
-      JSON.stringify(result.numberofmatchesPlayed(datamatches)),
-      "utf8",
-      function (err) {
-        if (err) {
-          console.log("An error occured while writing JSON Object to File.");
-          return console.log(err);
-        }
-        console.log("JSON file has been saved for Problem 1.");
-      }
-    );
+
+    let results = result.numberofmatchesPlayed(datamatches);
+    saveToFile("../public/output/numberofmatchesPlayed.json", results);
 
     //problem2
 
-    fs.writeFile(
-      "../public/output/numberofmatchesWon.json",
-      JSON.stringify(result.numberofmatchesWon(datamatches)),
-      "utf8",
-      function (err) {
-        if (err) {
-          console.log("An error occured while writing JSON Object to File.");
-          return console.log(err);
-        }
-        console.log("JSON file has been saved for Problem 2.");
-      }
-    );
+    results = result.numberofmatchesWon(datamatches);
+    saveToFile("../public/output/numberofmatchesWon.json", results);
 
     csv()
       .fromFile(deliveries)
       .then((datadeliveries) => {
-        //  console.log(datadeliveries);
-        //  console.log(datamatches);
-
         //problem3
 
-        fs.writeFile(
-          "../public/output/extraRuns2016.json",
-          JSON.stringify(result.extraRuns2016(datamatches, datadeliveries)),
-          "utf8",
-          function (err) {
-            if (err) {
-              console.log(
-                "An error occured while writing JSON Object to File."
-              );
-              return console.log(err);
-            }
-            console.log("JSON file has been saved for Problem 3.");
-          }
-        );
+        results = result.extraRuns2016(datamatches, datadeliveries);
+        saveToFile("../public/output/extraRuns2016.json", results);
 
         //problem4
 
-        fs.writeFile(
-          "../public/output/economicalBowlers2015.json",
-          JSON.stringify(
-            result.economicalBowlers2015(datamatches, datadeliveries)
-          ),
-          "utf8",
-          function (err) {
-            if (err) {
-              console.log(
-                "An error occured while writing JSON Object to File."
-              );
-              return console.log(err);
-            }
-            console.log("JSON file has been saved for Problem 4.");
-          }
-        );
+        results = result.economicalBowlers2015(datamatches, datadeliveries);
+        saveToFile("../public/output/economicalBowlers2015.json", results);
       });
   });
+
+function saveToFile(location, data) {
+  fs.writeFile(location, JSON.stringify(data), (err) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log("JSON file has been saved in", location);
+    }
+  });
+}
